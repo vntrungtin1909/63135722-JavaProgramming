@@ -39,13 +39,14 @@ public class Bai3 {
 			ds.add(sv);
 		}
 		
+		System.out.println("Danh sách sinh viên vừa nhập: ");
 		for (SinhVien i : ds) {
 			System.out.println(i);
 		}
 	}
 	
 	public static boolean checkCmnd(String cmnd) {
-		String pattern = "0\\d{9,10}";
+		String pattern = "[0-9]{9}";
 		if (cmnd.matches(pattern)) return true;
 		return false;
 	}
@@ -57,7 +58,7 @@ public class Bai3 {
 	}
 	
 	public static boolean checkEmail(String email) {
-		String pattern = "\\w+@\\w+\\.\\w";
+		String pattern = "\\w+@\\w+(\\.\\w+){1,2}";
 		if (email.matches(pattern)) return true;
 		return false;
 	}
